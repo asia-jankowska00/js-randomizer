@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random.io</title>
+    <!-- favicon from https://www.freefavicon.com/ -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="app">
+        <div class="color-box"></div>
+        <h1>Random.io</h1>
+
+        <div class="message-top">
+            <p>Welcome to random.io - a tool that allows you to randomly choose from a list.</p>
+            <p>Use the field below to add items to be randomly chosen from.</p>
+            <p>Put each item on a separate line. Spaces are allowed.</p>
+            <p>Clicking 'Add to list' will add items to currently existing list</p>
+        </div>
+
+        <div class="wrap flex-column">
+            <textarea name="" id="" cols="30" rows="10">random item 1
+random item 2
+random item 3
+random item 4
+random item 5</textarea>
+            <button id="addBtn">Add to list</button>
+        </div>
+        
+        <div class="message-bottom wrap flex-column">
+            <h2>Items in your list (separated by commas):</h2>
+            <p>Number of items: <span id="numberOfItems"></span></p>
+            <p id="inputsList"></p>
+            <button id="clearBtn">Clear list</button>
+        </div>
+
+        <div class="wrap">
+            <button class="preset-btn" id="giveOneBtn" data-num="1">Give me 1</button>
+            <button class="preset-btn" id="giveTwoBtn" data-num="2">Give me 2</button>
+            <button class="preset-btn" id="giveFiveBtn" data-num="5">Give me 5</button>
+            <div class="wrap">
+                <input type="number" min="1" id="giveManyInput" placeholder="0">
+                <button class="preset-btn" id="giveManyBtn">Give me this many</button>
+            </div>
+        </div>
+
+        <ul id="randomizedList"></ul>
+    </div>
+</body>
+</html>
